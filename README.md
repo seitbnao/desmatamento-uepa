@@ -34,3 +34,13 @@ para cada município selecionado. Isso nos permitirá entender como o
 desmatamento pode progredir ao longo dos próximos anos e identificar áreas que 
 estão sob maior risco. Essas previsões podem orientar políticas de conservação e 
 intervenções para reduzir o desmatamento na região
+
+
+
+## Os Testes
+
+# LinearRegression - regressão linear
+A regressão linear é um algoritmo de aprendizado supervisionado. Isso significa que ele requer um conjunto de dados rotulados, onde as variáveis independentes e dependentes são conhecidas, para treinar o modelo. O objetivo é prever ou estimar a variável dependente com base nas variáveis independentes, utilizando os padrões observados nos dados de treinamento.
+![Imagem do WhatsApp de 2024-04-15 à(s) 07 47 40_2d7ad733](https://github.com/seitbnao/desmatamento-uepa/assets/11374956/4163dd40-a262-4980-b5a9-3f900a973ae8)
+
+

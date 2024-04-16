@@ -5,14 +5,17 @@ import numpy as np
 
 df = pd.read_csv("municipio_bioma.csv")
 
-numeric_columns = ['ano', 'id_municipio', 'area_total', 'desmatado', 'vegetacao_natural', 'nao_vegetacao_natural', 'hidrografia']
-df[numeric_columns] = df[numeric_columns].astype(float)
+# Amostragem aleatória de 25% dos dados
+df_sample = df.sample(frac=0.25, random_state=42)
 
-maraba_df = df[df['id_municipio'] == 1504208]
-altamira_df = df[df['id_municipio'] == 1500602]
-braganca_df = df[df['id_municipio'] == 1501709]
-itaituba_df = df[df['id_municipio'] == 1503606]
-redencao_df = df[df['id_municipio'] == 1506138]
+numeric_columns = ['ano', 'id_municipio', 'area_total', 'desmatado', 'vegetacao_natural', 'nao_vegetacao_natural', 'hidrografia']
+df_sample[numeric_columns] = df_sample[numeric_columns].astype(float)
+
+maraba_df = df_sample[df_sample['id_municipio'] == 1504208]
+altamira_df = df_sample[df_sample['id_municipio'] == 1500602]
+braganca_df = df_sample[df_sample['id_municipio'] == 1501709]
+itaituba_df = df_sample[df_sample['id_municipio'] == 1503606]
+redencao_df = df_sample[df_sample['id_municipio'] == 1506138]
 
 desmatamento_altamira = altamira_df.groupby('ano')['desmatado'].sum()
 desmatamento_maraba = maraba_df.groupby('ano')['desmatado'].sum()
